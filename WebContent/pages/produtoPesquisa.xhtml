@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:composition template="/templates/modeloGeral.xhtml">
+		<ui:define name="conteudo">
+			<h:form>
+				<p:toolbar>
+					<f:facet name="left">
+						<h:outputText value="Produtos" />
+					</f:facet>
+				</p:toolbar>
+				<h:panelGrid columns="2">
+					<p:outputLabel value="Código: "/>
+					<p:inputText maxlength="50" size="30"/>
+					
+				</h:panelGrid>
+				<h:panelGrid columns="2">
+					<p:commandButton value="Buscar"/>
+					<p:commandButton value="Novo" action="/pages/produtoCadastro.xhtml?faces-redirect=true"/>
+				</h:panelGrid>
+				<p:dataTable emptyMessage="Nenhum registro encontrado">
+					<p:column headerText="Código">
+					</p:column>
+					
+					<p:column headerText="Descrição">
+					</p:column>
+					
+					<p:column headerText="Preço">
+					</p:column>
+					
+					<p:column headerText="Quantidade">
+					</p:column>
+					
+					<p:column headerText="Fabricante">
+					</p:column>
+					
+					<p:column headerText="Opções">
+					</p:column>
+					
+				</p:dataTable>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>
